@@ -1,0 +1,7 @@
+{
+  "name": "SupaFoundation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
