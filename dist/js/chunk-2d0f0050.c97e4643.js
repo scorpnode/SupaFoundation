@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0f0050"],{"9b1b":function(a,t,e){"use strict";e.r(t),e.d(t,"ShareWeb",(function(){return r}));var n=e("1547");class r extends n["a"]{async share(a){if("undefined"===typeof navigator||!navigator.share)throw this.unavailable("Share API not available in this browser");return await navigator.share({title:a.title,text:a.text,url:a.url}),{}}}}}]);
+//# sourceMappingURL=chunk-2d0f0050.c97e4643.js.map

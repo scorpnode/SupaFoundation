@@ -1,28 +1,44 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Tab 3</ion-title>
+      <ion-toolbar color="primary" >
+        <ion-title>Settings</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 3</ion-title>
-        </ion-toolbar>
-      </ion-header>
+   
       
-      <ExploreContainer name="Tab 3 page" />
+     <ion-button @click="logOut">
+  <ion-icon :icon="logOutOutline"></ion-icon>
+  LogOut
+  </ion-button>
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+<script >
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton,IonIcon } from '@ionic/vue';
+import { logOutOutline } from 'ionicons/icons';
+import {  signOut } from "firebase/auth";
+import {fbauth} from '../main'
+import { useRouter } from 'vue-router';
 
 export default  {
   name: 'Tab3',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,IonIcon,IonButton },
+  setup(){
+   const router = useRouter()
+
+    const logOut= ()=>{
+      signOut(fbauth).then(() => {
+    window.open("https://twitter.com/logout", '_blank');
+
+      router.replace({ name: 'signIn'})
+    }).catch((error) => {
+     console.log(error)
+    });
+    }
+    return{logOutOutline,logOut}
+  }
 }
 </script>
