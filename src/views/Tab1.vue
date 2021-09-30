@@ -36,7 +36,7 @@
   
    <span v-if="!showCounter" slot="legend-caption" >
         <ion-button color="primary" @click="goMine">START FARMING!</ion-button>
-        <p> <span>{{ balEnd }} sFuel</span></p>
+        <p> <span>{{ (balEnd/1000).toFixed(3) }} sFuel</span></p>
 
     
       </span>

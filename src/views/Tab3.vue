@@ -26,9 +26,7 @@ Twitter</ion-button>
 Discord</ion-button>
     </ion-card-header>
 
-    <ion-card-content>
-    SupaFuel tokens will be redeemable for in-game utility at a later stage.
-    </ion-card-content>
+    
   </ion-card>
 <ion-button @click="logOut">
   <ion-icon :icon="logOutOutline"></ion-icon>
@@ -42,7 +40,7 @@ Discord</ion-button>
 </template>
 
 <script >
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton,IonIcon } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton,IonIcon,IonCardTitle,IonCardHeader,IonCardContent,IonCard } from '@ionic/vue';
 import { logOutOutline,logoTwitter,logoDiscord } from 'ionicons/icons';
 import {  signOut } from "firebase/auth";
 import {fbauth} from '../main'
@@ -51,7 +49,7 @@ import { useRouter } from 'vue-router';
 
 export default  {
   name: 'Tab3',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,IonIcon,IonButton },
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,IonIcon,IonButton,IonCardTitle,IonCardHeader,IonCardContent,IonCard  },
   setup(){
    const router = useRouter()
 
