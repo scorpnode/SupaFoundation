@@ -6,21 +6,47 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-   
-      
-     <ion-button @click="logOut">
+   <div class="center">
+       <ion-card>
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+    SupaFuel tokens will be redeemable for in-game utility at a later stage.
+    </ion-card-content>
+  </ion-card>
+      <ion-card>
+    <ion-card-header>
+      <ion-card-title>Social Media</ion-card-title>
+  <ion-button @click="redir(1)"> <ion-icon :icon="logoTwitter"></ion-icon>
+Twitter</ion-button>
+ <ion-button @click="redir(2)" >   <ion-icon :icon="logoDiscord"></ion-icon>
+Discord</ion-button>
+    </ion-card-header>
+
+    <ion-card-content>
+    SupaFuel tokens will be redeemable for in-game utility at a later stage.
+    </ion-card-content>
+  </ion-card>
+<ion-button @click="logOut">
   <ion-icon :icon="logOutOutline"></ion-icon>
   LogOut
   </ion-button>
+   </div>
+      
+     
     </ion-content>
   </ion-page>
 </template>
 
 <script >
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton,IonIcon } from '@ionic/vue';
-import { logOutOutline } from 'ionicons/icons';
+import { logOutOutline,logoTwitter,logoDiscord } from 'ionicons/icons';
 import {  signOut } from "firebase/auth";
 import {fbauth} from '../main'
+
 import { useRouter } from 'vue-router';
 
 export default  {
@@ -38,7 +64,28 @@ export default  {
      console.log(error)
     });
     }
-    return{logOutOutline,logOut}
+
+    const redir=(num)=>{
+      if(num==1){
+            window.open("https://twitter.com/SupaFoundation", '_blank');
+
+
+      }else{
+            window.open("https://discord.com/invite/7zP4fs3U3N", '_blank');
+
+
+      }
+
+    }
+    return{logOutOutline,logOut,logoTwitter,logoDiscord,redir}
   }
 }
 </script>
+<style scoped>
+.center {
+    text-align: center;
+
+  margin: auto;
+ 
+}
+</style>

@@ -35,7 +35,7 @@
   font-size="1.5rem">
   
    <span v-if="!showCounter" slot="legend-caption" >
-        <ion-button color="primary" @click="goMine">Mine</ion-button>
+        <ion-button color="primary" @click="goMine">START FARMING!</ion-button>
         <p> <span>{{ balEnd }} sFuel</span></p>
 
     
