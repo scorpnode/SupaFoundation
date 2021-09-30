@@ -81,7 +81,7 @@ fetch('https://api.supa.foundation/refreshuser', {
 
    }
    const refreshNews= async()=> {
-    let response = await fetch('https://supa.foundation/news.json');
+    let response = await fetch('https://app.supa.foundation/news.json');
 
     console.log(response.status); // 200
     console.log(response.statusText); // OK

@@ -276,7 +276,7 @@ const progress=ref(0)
      const showCounter=ref(false)
     const currentRate=ref(0)
      const refreshNews= async()=> {
-    let response = await fetch('https://supa.foundation/news.json');
+    let response = await fetch('https://app.supa.foundation/news.json');
 
 
 

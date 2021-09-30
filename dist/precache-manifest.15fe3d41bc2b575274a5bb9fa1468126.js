@@ -144,12 +144,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/assets/shapes.svg"
   },
   {
-    "revision": "31cc2556cb6af7175634",
+    "revision": "2ce1c6a8f3420cd44a83",
     "url": "/css/app.70e55f0e.css"
-  },
-  {
-    "revision": "b5e3e53ba93431ad26f9",
-    "url": "/css/chunk-22b936b4.ea810344.css"
   },
   {
     "revision": "efa15894170dc7ca1bc7",
@@ -160,6 +156,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/chunk-302188f0.054b02bf.css"
   },
   {
+    "revision": "6fc652c16177605a45f0",
+    "url": "/css/chunk-e2ae2990.c719cd76.css"
+  },
+  {
     "revision": "12f2c7b0f0de91f6b199",
     "url": "/css/chunk-f883b3e2.1850edeb.css"
   },
@@ -168,12 +168,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/chunk-vendors.d0ded9bd.css"
   },
   {
-    "revision": "db1b310a8b3c076a71c86eede01b2d7c",
+    "revision": "4ea98c4f160246072e60fc77b09cbdf9",
     "url": "/index.html"
   },
   {
-    "revision": "31cc2556cb6af7175634",
-    "url": "/js/app.d465593b.js"
+    "revision": "2ce1c6a8f3420cd44a83",
+    "url": "/js/app.23de466a.js"
   },
   {
     "revision": "846752f65953cfb7a476",
@@ -210,10 +210,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "55d99dedf592a3913b32",
     "url": "/js/chunk-21a76241.8a2da030.js"
-  },
-  {
-    "revision": "b5e3e53ba93431ad26f9",
-    "url": "/js/chunk-22b936b4.fe95efd1.js"
   },
   {
     "revision": "efa15894170dc7ca1bc7",
@@ -396,6 +392,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-d8413eac.83dc0076.js"
   },
   {
+    "revision": "6fc652c16177605a45f0",
+    "url": "/js/chunk-e2ae2990.c2bf6897.js"
+  },
+  {
     "revision": "f3231d067b98dbe620a8",
     "url": "/js/chunk-e5275ddc.bf53e56f.js"
   },
@@ -422,6 +422,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1c8f8f84e3dc6f704ca12e90c6905a7",
     "url": "/manifest.json"
+  },
+  {
+    "revision": "a63a435247d37c03e5eee363b4817181",
+    "url": "/news.json"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
