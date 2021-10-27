@@ -25,7 +25,9 @@ Twitter</ion-button>
  <ion-button @click="redir(2)" >   <ion-icon :icon="logoDiscord"></ion-icon>
 Discord</ion-button>
     </ion-card-header>
-
+  <ion-card-content @click="copyReferral">
+    CODE: NFYS2OBY (BASE32 ENCRYPTED)
+    </ion-card-content>
     
   </ion-card>
 <ion-button @click="logOut">
@@ -40,10 +42,11 @@ Discord</ion-button>
 </template>
 
 <script >
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton,IonIcon,IonCardTitle,IonCardHeader,IonCardContent,IonCard } from '@ionic/vue';
+import { toastController,IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonButton,IonIcon,IonCardTitle,IonCardHeader,IonCardContent,IonCard } from '@ionic/vue';
 import { logOutOutline,logoTwitter,logoDiscord } from 'ionicons/icons';
 import {  signOut } from "firebase/auth";
 import {fbauth} from '../main'
+  import { copyText } from 'vue3-clipboard'
 
 import { useRouter } from 'vue-router';
 
@@ -52,7 +55,35 @@ export default  {
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage,IonIcon,IonButton,IonCardTitle,IonCardHeader,IonCardContent,IonCard  },
   setup(){
    const router = useRouter()
+     const launchToast= async(message,color)=>{
+      
+      const toast = await toastController
+        .create({
+          message: message,
+          color: color,
+          duration: 3000
+        })
+      return toast.present();
+   
+    };
+  const copyReferral= async () => {
+   copyText( 'NFYS2OBY', undefined, (error, event) => {
+          if (error) {
+     
+            console.log(error)
+          } else {
+        launchToast("Code copied","success")
+            console.log(event)
+          }
+        })
 
+  // await Clipboard.write({
+  //   string: "http://app.supa.foundation/r/"+referralCode.value
+  // });
+
+
+
+};
     const logOut= ()=>{
       signOut(fbauth).then(() => {
     window.open("https://twitter.com/logout", '_blank');
@@ -75,7 +106,7 @@ export default  {
       }
 
     }
-    return{logOutOutline,logOut,logoTwitter,logoDiscord,redir}
+    return{logOutOutline,logOut,logoTwitter,logoDiscord,redir,copyReferral}
   }
 }
 </script>
