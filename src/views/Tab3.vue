@@ -26,7 +26,7 @@ Twitter</ion-button>
 Discord</ion-button>
     </ion-card-header>
   <ion-card-content @click="copyReferral">
-    CODE: NFYS2OBY (BASE32 ENCRYPTED)
+    ENCRYPTED CODE: NFYS2OBY (BASE32 ENCRYPTED)
     </ion-card-content>
     
   </ion-card>
