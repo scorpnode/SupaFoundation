@@ -2,18 +2,26 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary" >
-        <ion-title>Welcome to Supa Foundation</ion-title>
+        <ion-title>Welcome to SUPA Foundation</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
   
       <div id="container">
-             
+             <ion-text color="dark">
+  <h1>Please sign in with Twitter</h1>
+          <h6>We value your privacy. Twitter sign in permissions are set to minimum.</h6>
+
+    <h6>We chose to Twitter to prevent multiple duplicates and spam accounts.</h6>
+
+
+
+</ion-text> 
 
       <ion-button v-if="!fbuser && showLogin" @click="signInTwitter">
   <ion-icon :icon="logoTwitter"></ion-icon>
 
-  Sign In With Twitter
+  Sign In
   </ion-button>
     <ion-spinner v-if="(fbuser || !showLogin) && !showForm" name="crescent"></ion-spinner>
   <ion-item-group v-if="showForm">

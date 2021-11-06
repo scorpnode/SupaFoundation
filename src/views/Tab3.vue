@@ -14,7 +14,7 @@
     </ion-card-header>
 
     <ion-card-content>
-    SupaFuel tokens will be redeemable for in-game utility at a later stage.
+    SUPA Fuel tokens will be redeemable for in-game utility at a later stage.
     </ion-card-content>
   </ion-card>
       <ion-card>

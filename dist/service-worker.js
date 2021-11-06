@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.49ff701590aa7b94a1e83d5d0fad3f87.js"
+  "/precache-manifest.ce1e103dd6b4483694ff1a6f79da5f6b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "SupaFoundation"});
